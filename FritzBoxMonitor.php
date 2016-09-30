@@ -43,7 +43,7 @@ if(is_soap_fault($result)) {
 
 $data = array();
 $data['sent'] = $sent*$correction;
-$data['received'] = $received*$correction*5;
+$data['received'] = $received*$correction;
 $data['total'] = $data['sent']+$data['received'];
 $data['volume'] = $max_volume*pow(1024,3);
 $data['remaining'] = $data['volume']-$data['total'];
@@ -54,9 +54,9 @@ if($data['remaining']<0) {$data['remaining'] = 0;}
 <head>
 	<meta charset="utf-8" />
 	<title>Data volume overview</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
 	<style>
 		body {
 			margin: 0px 0px 0px 0px;
