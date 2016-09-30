@@ -54,10 +54,10 @@ $data['remaining'] = $data['volume']-$data['total'];
 <head>
 	<meta charset="utf-8" />
 	<title>Data volume overview</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
+    	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <style>
+    	<style>
 		body {
 			margin: 0px 0px 0px 0px;
 			padding: 0px 0px 0px 0px;
