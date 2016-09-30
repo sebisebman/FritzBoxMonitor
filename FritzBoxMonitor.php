@@ -106,6 +106,7 @@ if($data['remaining']<0) {$data['remaining'] = 0;}
 
 		var ctx = document.getElementById('chart');
 		Chart.defaults.global.defaultFontFamily = 'Roboto';
+		Chart.defaults.global.animation.easing = 'easeOutBounce';
 
 		Chart.pluginService.register({
 		  beforeDraw: function(chart) {
