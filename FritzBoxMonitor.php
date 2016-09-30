@@ -2,7 +2,7 @@
 /**
  * FritzBoxMonitor
  *
- * @author Sebastian Krebs <sebastian.krebs@snfachpresse.de>
+ * @author Sebastian Krebs <sebastiankrebs@gmx.net>
  * 
  * This simple php Script shows the remaining data-volume in a pie chart overview. 
  * The Data is taken directly from the FritzBox via UPnP, which must be enabled. 
