@@ -202,7 +202,5 @@ $data['remaining'] = $data['volume']-$data['total'];
 		document.getElementById('infos').innerHTML += output;
 	</script>
 
-</div>
-
 </body>
 </html>
