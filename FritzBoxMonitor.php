@@ -2,7 +2,7 @@
 /**
  * FritzBoxMonitor
  *
- * @author Sebastian Krebs <sebastiankrebs@gmx.net>
+ * @author Sebastian Krebs <sebastian.krebs@snfachpresse.de>
  * 
  * This simple php Script shows the remaining data-volume in a pie chart overview. 
  * The Data is taken directly from the FritzBox via UPnP, which must be enabled. 
@@ -54,10 +54,10 @@ $data['remaining'] = $data['volume']-$data['total'];
 <head>
 	<meta charset="utf-8" />
 	<title>Data volume overview</title>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
-    	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    	<style>
+	<style>
 		body {
 			margin: 0px 0px 0px 0px;
 			padding: 0px 0px 0px 0px;
@@ -72,8 +72,8 @@ $data['remaining'] = $data['volume']-$data['total'];
 			margin: auto;
 			display: block;
 			position: absolute;
-			top: 25%;
-			bottom: 45%;
+			top: 30%;
+			bottom: 30%;
 			left: 0;
 			right: 0;
 		}
@@ -81,10 +81,10 @@ $data['remaining'] = $data['volume']-$data['total'];
 			position: absolute;
 			bottom: 30px;
 			width: 100%;
-			background-color: #333;
-			color: #555;
+			color: #444;
 			cursor: pointer;
-			font-size: 0.7em;
+			font-size: 1em;
+    		font-size: 2vw;
 		}
 		#infos:hover {
 			color: #fff;
@@ -93,7 +93,7 @@ $data['remaining'] = $data['volume']-$data['total'];
 </head>
 <body>
 
-	<canvas id="chart" width="400"></canvas>
+	<canvas id="chart" width="500" height="300"></canvas>
 	<script>
 		function formatBytes(bytes,decimals) {
 			if(bytes == 0) return '0 Byte';
@@ -165,6 +165,7 @@ $data['remaining'] = $data['volume']-$data['total'];
 				}]
 			},
 			options: {
+        		responsive: true,
 				cutoutPercentage: 70,
 				title: {
 					display: false,
