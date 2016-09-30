@@ -43,11 +43,11 @@ if(is_soap_fault($result)) {
 
 $data = array();
 $data['sent'] = $sent*$correction;
-$data['received'] = $received*$correction;
+$data['received'] = $received*$correction*5;
 $data['total'] = $data['sent']+$data['received'];
 $data['volume'] = $max_volume*pow(1024,3);
 $data['remaining'] = $data['volume']-$data['total'];
-
+if($data['remaining']<0) {$data['remaining'] = 0;}
 ?>
 <!DOCTYPE html>
 <html lang="de">
