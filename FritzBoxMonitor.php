@@ -2,7 +2,7 @@
 /**
  * FritzBoxMonitor
  *
- * @author Sebastian Krebs <sebastian.krebs@snfachpresse.de>
+ * @author Sebastian Krebs <sebastiankrebs@gmx.net>
  * 
  * This simple php Script shows the remaining data-volume in a pie chart overview. 
  * The Data is taken directly from the FritzBox via UPnP, which must be enabled. 
@@ -53,7 +53,7 @@ if($data['remaining']<0) {$data['remaining'] = 0;}
 <html lang="de">
 <head>
 	<meta charset="utf-8" />
-	<title>Data volume overview</title>
+	<title>Data Volume Overview</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
@@ -72,8 +72,8 @@ if($data['remaining']<0) {$data['remaining'] = 0;}
 			margin: auto;
 			display: block;
 			position: absolute;
-			top: 30%;
-			bottom: 30%;
+			top: 0%;
+			bottom: 0%;
 			left: 0;
 			right: 0;
 		}
@@ -83,7 +83,7 @@ if($data['remaining']<0) {$data['remaining'] = 0;}
 			width: 100%;
 			color: #444;
 			cursor: pointer;
-			font-size: 1em;
+			font-size: 2em;
     		font-size: 2vw;
 		}
 		#infos:hover {
@@ -93,7 +93,8 @@ if($data['remaining']<0) {$data['remaining'] = 0;}
 </head>
 <body>
 
-	<canvas id="chart" width="500" height="300"></canvas>
+	<canvas id="chart" height="450" width="500"></canvas>
+	
 	<script>
 		function formatBytes(bytes,decimals) {
 			if(bytes == 0) return '0 Byte';
